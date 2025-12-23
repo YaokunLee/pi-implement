@@ -26,6 +26,9 @@ MUJOCO_GL=glx SERVER_ARGS="--env LIBERO" docker compose -f examples/libero/compo
 You can customize the loaded checkpoint by providing additional `SERVER_ARGS` (see `scripts/serve_policy.py`), and the LIBERO task suite by providing additional `CLIENT_ARGS` (see `examples/libero/main.py`).
 For example:
 
+ssh -N -L 8899:127.0.0.1:8888 root@`213.173.99.13` -p `13924` -i ~/.ssh/id_ed25519
+
+
 ```bash
 # To load a custom checkpoint (located in the top-level openpi/ directory):
 export SERVER_ARGS="--env LIBERO policy:checkpoint --policy.config pi05_libero --policy.dir ./my_custom_checkpoint"
@@ -66,6 +69,7 @@ uv run scripts/serve_policy.py --env LIBERO
 If you want to reproduce the following numbers, you can evaluate the checkpoint at `gs://openpi-assets/checkpoints/pi05_libero/`. This
 checkpoint was trained in openpi with the `pi05_libero` config.
 
-| Model | Libero Spatial | Libero Object | Libero Goal | Libero 10 | Average |
-|-------|---------------|---------------|-------------|-----------|---------|
-| π0.5 @ 30k (finetuned) | 98.8 | 98.2 | 98.0 | 92.4 | 96.85
+
+| Model                   | Libero Spatial | Libero Object | Libero Goal | Libero 10 | Average |
+| ----------------------- | -------------- | ------------- | ----------- | --------- | ------- |
+| π0.5 @ 30k (finetuned) | 98.8           | 98.2          | 98.0        | 92.4      | 96.85   |

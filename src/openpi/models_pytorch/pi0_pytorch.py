@@ -248,8 +248,10 @@ class PI0Pytorch(nn.Module):
             def state_proj_func(state):
                 return self.state_proj(state)
 
+            # 这里节省的显存似乎并不大？毕竟只是一个 32 X action_expert_config.width 的激活？
             state_emb = self._apply_checkpoint(state_proj_func, state)
 
+            # 等价于 state_emb.unsqueeze(1)
             embs.append(state_emb[:, None, :])
             bsize = state_emb.shape[0]
             device = state_emb.device

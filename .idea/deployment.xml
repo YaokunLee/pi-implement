@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="root@213.173.99.13:13924 agent" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+    <option name="confirmBeforeUploading" value="false" />
+    <serverData>
+      <paths name="root@185.216.20.167:26979 agent">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/workspace/projects/openpi" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="root@185.216.20.167:47590 agent">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/workspace/projects/openpi" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="root@213.173.99.13:13924 agent">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/workspace/projects/openpi" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

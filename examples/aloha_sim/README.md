@@ -34,3 +34,5 @@ Terminal window 2:
 # Run the server
 uv run scripts/serve_policy.py --env ALOHA_SIM
 ```
+
+/workspace/uv/uv pip install -e ../../packages/openpi-client

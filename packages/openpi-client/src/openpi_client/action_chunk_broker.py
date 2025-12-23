@@ -38,6 +38,8 @@ class ActionChunkBroker(_base_policy.BasePolicy):
         results = tree.map_structure(slicer, self._last_results)
         self._cur_step += 1
 
+        # _action_horizon
+        # 是动作块的长度，表示策略一次推理返回的动作序列在时间维上的步数。
         if self._cur_step >= self._action_horizon:
             self._last_results = None
 
